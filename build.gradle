@@ -4,7 +4,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'org.example'
+group = 'org.dhltest'
 version = '1.0-SNAPSHOT'
 
 compileJava.options.encoding = 'UTF-8'
