@@ -7,7 +7,6 @@ import org.dhltest.framework.web.driver.WebBrowser;
 import org.dhltest.framework.web.pages.WebPageSection;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 
 public class ChooseRouteSection extends WebPageSection {
     @FindBy(id = "origin-country")

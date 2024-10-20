@@ -2,10 +2,8 @@ package org.dhltest.framework.web.driver.screenshort;
 
 import java.io.File;
 
-
-import org.openqa.selenium.OutputType;
-
 import org.dhltest.framework.web.driver.WebBrowser;
+import org.openqa.selenium.OutputType;
 
 public final class FileScreenshot extends Screenshot {
 

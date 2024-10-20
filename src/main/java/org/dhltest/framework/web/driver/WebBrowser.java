@@ -3,14 +3,12 @@ package org.dhltest.framework.web.driver;
 import java.util.Arrays;
 
 import org.apache.logging.log4j.Logger;
-
-import org.openqa.selenium.NoSuchWindowException;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.interactions.Actions;
-
 import org.dhltest.framework.log.AppLogManager;
 import org.dhltest.framework.platform.Platform;
 import org.dhltest.framework.util.StringUtils;
+import org.openqa.selenium.NoSuchWindowException;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.interactions.Actions;
 
 /**
  * Decorator for Selenium WebDriver interface

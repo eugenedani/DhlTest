@@ -2,8 +2,6 @@ package org.dhltest.framework.web.driver.types;
 
 import java.util.List;
 
-
-
 import org.dhltest.framework.log.AppLogManager;
 import org.dhltest.framework.web.driver.WebDriverProperties;
 

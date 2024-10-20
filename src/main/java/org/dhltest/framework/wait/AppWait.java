@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.function.BooleanSupplier;
 
-import org.dhltest.framework.web.driver.WebBrowser;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.StaleElementReferenceException;

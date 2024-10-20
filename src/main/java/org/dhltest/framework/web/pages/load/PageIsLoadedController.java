@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.apache.logging.log4j.Logger;
 import org.dhltest.framework.log.AppLogManager;
-import org.dhltest.framework.wait.AppWait;
 import org.dhltest.framework.wait.PageWaitTime;
 import org.dhltest.framework.wait.Timeout;
 import org.dhltest.framework.wait.WaitTime;

@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Objects;
 
 import org.apache.logging.log4j.Logger;
-
 import org.dhltest.framework.log.AppLogManager;
 import org.dhltest.framework.web.driver.BrowserFactory;
 import org.dhltest.framework.web.driver.WebBrowser;

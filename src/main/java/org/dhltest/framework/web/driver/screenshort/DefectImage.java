@@ -2,8 +2,6 @@ package org.dhltest.framework.web.driver.screenshort;
 
 import java.nio.file.Paths;
 
-
-
 import org.dhltest.framework.CurrentPath;
 import org.dhltest.framework.web.driver.WebBrowser;
 

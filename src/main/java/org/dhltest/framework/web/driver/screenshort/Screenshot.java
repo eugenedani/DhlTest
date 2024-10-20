@@ -6,10 +6,8 @@ import java.nio.file.CopyOption;
 import java.nio.file.Files;
 
 import org.apache.logging.log4j.Logger;
-
-import org.openqa.selenium.WebDriverException;
-
 import org.dhltest.framework.log.AppLogManager;
+import org.openqa.selenium.WebDriverException;
 
 public abstract class Screenshot {
     

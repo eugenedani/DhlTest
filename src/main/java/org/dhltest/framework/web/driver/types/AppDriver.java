@@ -3,14 +3,12 @@ package org.dhltest.framework.web.driver.types;
 import java.net.URL;
 
 import org.apache.logging.log4j.Logger;
-
+import org.dhltest.framework.log.AppLogManager;
+import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import org.dhltest.framework.log.AppLogManager;
-import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
 
 public abstract class AppDriver {
     

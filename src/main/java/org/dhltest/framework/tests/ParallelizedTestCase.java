@@ -1,9 +1,8 @@
 package org.dhltest.framework.tests;
 
-import org.junit.runner.RunWith;
-
 import org.dhltest.framework.Parallelized;
 import org.dhltest.framework.web.driver.WebDriverProperties;
+import org.junit.runner.RunWith;
 
 /**
  * This class is used when tests should be run parallel

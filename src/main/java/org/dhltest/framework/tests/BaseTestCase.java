@@ -3,20 +3,17 @@ package org.dhltest.framework.tests;
 import java.util.List;
 
 import org.apache.logging.log4j.Logger;
+import org.dhltest.framework.AppWatcherTestRule;
+import org.dhltest.framework.ConfigurationData;
+import org.dhltest.framework.TestSettings;
+import org.dhltest.framework.log.AppLogManager;
+import org.dhltest.framework.web.driver.WebBrowser;
+import org.dhltest.framework.web.driver.WebDriverProperties;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.runners.Parameterized;
-
-import org.dhltest.framework.ConfigurationData;
-import org.dhltest.framework.TestSettings;
-import org.dhltest.framework.AppWatcherTestRule;
-import org.dhltest.framework.log.AppLogManager;
-import org.dhltest.framework.web.driver.WebBrowser;
-import org.dhltest.framework.web.driver.WebDriverProperties;
-import org.dhltest.framework.web.driver.screenshort.DefectImage;
-import org.dhltest.framework.web.driver.screenshort.FileScreenshot;
 
 /**
  * Base test class that contains data for all tests

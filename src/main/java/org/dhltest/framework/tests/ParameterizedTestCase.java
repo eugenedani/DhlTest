@@ -1,9 +1,8 @@
 package org.dhltest.framework.tests;
 
+import org.dhltest.framework.web.driver.WebDriverProperties;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
-import org.dhltest.framework.web.driver.WebDriverProperties;
 
 /**
  * This class is used to run tests one by one

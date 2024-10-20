@@ -1,11 +1,8 @@
 package org.dhltest.framework.web.driver.browsers;
 
-
+import org.dhltest.framework.web.driver.WebDriverProperties;
 import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
-
-import org.dhltest.framework.web.driver.WebDriverProperties;
 
 public final class FirefoxCapabilities extends BrowserCapabilities {
     

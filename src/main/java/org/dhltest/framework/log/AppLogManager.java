@@ -8,7 +8,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.LoggerContext;
 import org.apache.logging.log4j.status.StatusLogger;
-
 import org.dhltest.framework.CurrentPath;
 import org.dhltest.framework.web.driver.WebBrowser;
 

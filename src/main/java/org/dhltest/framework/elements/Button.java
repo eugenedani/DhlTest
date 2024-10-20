@@ -3,9 +3,7 @@ package org.dhltest.framework.elements;
 import java.util.function.Supplier;
 
 import org.dhltest.framework.web.pages.Page;
-import org.dhltest.framework.web.pages.WebPage;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class Button {
     private final WebElement button;

@@ -4,13 +4,11 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.apache.logging.log4j.Logger;
-
+import org.dhltest.framework.log.AppLogManager;
+import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import org.dhltest.framework.log.AppLogManager;
-import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
 
 public final class RemoteDriver extends AppDriver {
     private final String hubUrl;

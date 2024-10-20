@@ -1,11 +1,9 @@
 package org.dhltest.framework.web.driver;
 
 import org.apache.logging.log4j.Logger;
-
+import org.dhltest.framework.log.AppLogManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.WebDriverListener;
-
-import org.dhltest.framework.log.AppLogManager;
 
 public class AppWebDriverListener implements WebDriverListener {
     

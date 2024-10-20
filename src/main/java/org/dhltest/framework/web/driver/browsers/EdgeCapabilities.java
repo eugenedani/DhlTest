@@ -1,10 +1,8 @@
 package org.dhltest.framework.web.driver.browsers;
 
-
-import org.openqa.selenium.edge.EdgeOptions;
-
 import org.dhltest.framework.web.driver.WebDriverProperties;
 import org.dhltest.framework.web.driver.windows.HeadlessWindowDimension;
+import org.openqa.selenium.edge.EdgeOptions;
 
 public final class EdgeCapabilities extends BrowserCapabilities {
     

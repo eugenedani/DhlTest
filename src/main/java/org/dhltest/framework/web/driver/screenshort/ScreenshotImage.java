@@ -4,8 +4,6 @@ import java.io.File;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 
-
-
 import org.dhltest.framework.log.AppLogManager;
 import org.dhltest.framework.util.DateUtils;
 import org.dhltest.framework.util.FileSystemName;

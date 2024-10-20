@@ -1,19 +1,13 @@
 package org.dhltest.framework.web.pages;
 
-import java.util.List;
-
 import org.dhltest.framework.wait.AppWait;
 import org.dhltest.framework.wait.PageWaitTime;
 import org.dhltest.framework.wait.WaitTime;
 import org.dhltest.framework.web.driver.WebBrowser;
 import org.dhltest.framework.web.pages.load.PageLoadedChecker;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Base WebPage class that should be extended by any page class
@@ -53,7 +47,7 @@ public class WebPage extends Page implements PageLoadedCheck {
     }
 
     private void closeHelper() {
-        if (!wait.forElement(helpIframe, WaitTime.Second1)){
+        if (!wait.forElement(helpIframe, WaitTime.Second1)) {
             return;
         }
 

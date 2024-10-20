@@ -1,30 +1,26 @@
 package org.dhltest.framework.web.driver.types;
 
-import java.io.File;
 import java.util.Optional;
 
 import org.dhltest.framework.ActionWasNotDoneException;
+import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 
-import org.dhltest.framework.CurrentPath;
-import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
-
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 
 public final class ChromeLocalDriver extends AppDriver {
-    
+
     private final AppWebDriverManager webDriverManager;
 
-    public ChromeLocalDriver( BrowserCapabilities options) {
+    public ChromeLocalDriver(BrowserCapabilities options) {
         super(options, "ChromeLocalDriver");
         webDriverManager = new AppWebDriverManager(options.driverProperties(), DriverManagerType.CHROME);
     }
 
-    
     @Override
     public WebDriver create() {
         ChromeDriver webDriver = new ChromeDriver(service(), (ChromeOptions) capabilities());
@@ -32,7 +28,6 @@ public final class ChromeLocalDriver extends AppDriver {
         return webDriver;
     }
 
-    
     private ChromeDriverService service() {
         ChromeDriverService.Builder builder = new ChromeDriverService.Builder();
 

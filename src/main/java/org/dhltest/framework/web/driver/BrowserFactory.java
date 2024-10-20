@@ -1,9 +1,8 @@
 package org.dhltest.framework.web.driver;
 
+import org.dhltest.framework.log.AppLogManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-
-import org.dhltest.framework.log.AppLogManager;
 
 public final class BrowserFactory {
 

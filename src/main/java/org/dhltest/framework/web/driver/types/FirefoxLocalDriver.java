@@ -3,12 +3,10 @@ package org.dhltest.framework.web.driver.types;
 import java.util.Optional;
 
 import org.dhltest.framework.ActionWasNotDoneException;
+import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-
-import org.dhltest.framework.CurrentPath;
-import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
 
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 

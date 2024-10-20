@@ -4,10 +4,10 @@ import org.dhltest.framework.web.driver.browsers.BrowserCapabilities;
 import org.dhltest.framework.web.driver.browsers.ChromeCapabilities;
 import org.dhltest.framework.web.driver.browsers.EdgeCapabilities;
 import org.dhltest.framework.web.driver.browsers.FirefoxCapabilities;
+import org.dhltest.framework.web.driver.types.AppDriver;
 import org.dhltest.framework.web.driver.types.ChromeLocalDriver;
 import org.dhltest.framework.web.driver.types.EdgeLocalDriver;
 import org.dhltest.framework.web.driver.types.FirefoxLocalDriver;
-import org.dhltest.framework.web.driver.types.AppDriver;
 
 /**
  * Describes browser types that can be used for creating Selenium WebDriver
