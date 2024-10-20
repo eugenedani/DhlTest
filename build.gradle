@@ -1,4 +1,5 @@
 plugins {
+    id 'application'
     id 'java'
     id 'java-library'
     id 'maven-publish'
@@ -8,7 +9,6 @@ group = 'org.dhltest'
 version = '1.0-SNAPSHOT'
 
 compileJava.options.encoding = 'UTF-8'
-compileJava.options.compilerArgs += '-proc:none'
 
 def seleniumVersion = "4.25.0"
 def log4jVersion = "2.24.1"
@@ -19,8 +19,16 @@ repositories {
     gradlePluginPortal()
 }
 
+java {
+    sourceCompatibility = 17
+    targetCompatibility = 17
+}
+
 dependencies {
     api group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.2'
+    api group: 'junit', name: 'junit', version: '4.13.2'
+    api group: 'org.apache.commons', name: 'commons-lang3', version: '3.17.0'
+    api group: 'org.apache.commons', name: 'commons-text', version: '1.12.0'
     api group: 'org.apache.logging.log4j', name: 'log4j-api', version: "${log4jVersion}"
     api group: 'org.apache.logging.log4j', name: 'log4j-core', version: "${log4jVersion}"
     api group: 'org.apache.logging.log4j', name: 'log4j-iostreams', version: "${log4jVersion}"
@@ -31,10 +39,21 @@ dependencies {
     api group: 'org.seleniumhq.selenium', name: 'selenium-java', version: "${seleniumVersion}"
     api group: 'org.seleniumhq.selenium', name: 'selenium-java', version: "${seleniumVersion}", classifier: 'sources'
 
-    testImplementation platform('junit:junit:4.13')
-    testImplementation 'junit:junit:4.13'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'org.dhltest.App'
 }
 
 test {
-    useJUnitPlatform()
+    useJUnit()
+    include(["**/*Tests.class", "**/*Test.class"])
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+    }
+    reports.html.outputLocation = file("$projectDir/test-results")
+    reports.junitXml.outputLocation = file("$projectDir/test-results/xml")
 }

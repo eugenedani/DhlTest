@@ -40,3 +40,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Test Results ###
+/test-results/
+/src/test/workdir/
