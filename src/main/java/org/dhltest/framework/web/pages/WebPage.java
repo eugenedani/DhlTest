@@ -4,6 +4,7 @@ import org.dhltest.framework.wait.AppWait;
 import org.dhltest.framework.wait.PageWaitTime;
 import org.dhltest.framework.wait.WaitTime;
 import org.dhltest.framework.web.driver.WebBrowser;
+import org.dhltest.framework.web.driver.WebBrowserType;
 import org.dhltest.framework.web.pages.load.PageLoadedChecker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -55,7 +56,11 @@ public class WebPage extends Page implements PageLoadedCheck {
         By selector = By.cssSelector("#root div.content button[color][class]");
         if (wait.waitFor(() -> !webBrowser.findElements(selector).isEmpty(), WaitTime.Seconds10)) {
             WebElement button = webBrowser.findElement(selector);
-            button.click();
+            if (webBrowser.is(WebBrowserType.Firefox)) {
+                webBrowser.executeScript("arguments[0].click()", button);
+            } else {
+                button.click();
+            }
             wait.forElementDisappear(button, WaitTime.Seconds2);
         }
         webBrowser.switchTo().defaultContent();

@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ChooseRouteSection extends WebPageSection {
+    @FindBy(css = "div.c-calculator--padding-vertical>h3[class]")
+    private WebElement titleElement;
     @FindBy(id = "origin-country")
     private WebElement originCountrySelect;
     @FindBy(id = "destination-country")
@@ -29,7 +31,7 @@ public class ChooseRouteSection extends WebPageSection {
     }
 
     public ChooseRouteSection scrollIntoView(){
-        webBrowser.executeScript("arguments[0].scrollIntoView();", originCountrySelect);
+        webBrowser.executeScript("arguments[0].scrollIntoView();", titleElement);
         return this;
     }
 
