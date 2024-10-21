@@ -26,6 +26,6 @@ All paths are from project root.
 
 Project has 3 levels
 
-1. framework package has classes supporting classes to make possible to run tests
+1. framework package has supporting classes to make possible to run tests
 2. models package has web page and web page sections classes
 3. test has JUnut tests and suite
