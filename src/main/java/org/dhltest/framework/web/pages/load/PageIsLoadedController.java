@@ -10,7 +10,6 @@ import org.dhltest.framework.wait.Timeout;
 import org.dhltest.framework.wait.WaitTime;
 import org.dhltest.framework.wait.WaitTimeout;
 import org.dhltest.framework.web.driver.WebBrowser;
-import org.dhltest.framework.web.pages.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
@@ -26,8 +25,6 @@ public class PageIsLoadedController {
 
     private final WebBrowser webBrowser;
 
-    private final Page page;
-
     private final Timeout timeout;
 
     private final List<By> selectors;
@@ -37,14 +34,13 @@ public class PageIsLoadedController {
     private boolean isLoaded;
     private boolean checkPageStatus;
 
-    public PageIsLoadedController(Page page, PageWaitTime pageWaitTime) {
-        this.page = page;
-        webBrowser = page.webBrowser();
-        timeout = pageWaitTime;
-        waitingWasDone = false;
-        isLoaded = false;
-        checkPageStatus = false;
-        selectors = new ArrayList<>();
+    public PageIsLoadedController(WebBrowser webBrowser, PageWaitTime pageWaitTime) {
+        this.webBrowser = webBrowser;
+        this.timeout = pageWaitTime;
+        this.waitingWasDone = false;
+        this.isLoaded = false;
+        this.checkPageStatus = false;
+        this.selectors = new ArrayList<>();
     }
 
     /**
@@ -142,10 +138,9 @@ public class PageIsLoadedController {
             Wait<WebDriver> wait = new WebDriverWait(webBrowser, remainedTime.duration());
             try {
                 if (wait.until(webBrowser -> !webBrowser.findElements(selector).isEmpty() && webBrowser.findElement(selector).isDisplayed())) {
-                    //if (wait.forElement(webBrowser.findElement(selector))) {
                     remainedTime = getRemainedTime();
                 }
-            } catch (TimeoutException ex){
+            } catch (TimeoutException ex) {
                 return false;
             }
         }

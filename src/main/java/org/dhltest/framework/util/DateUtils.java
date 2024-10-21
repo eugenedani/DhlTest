@@ -12,16 +12,6 @@ public class DateUtils {
     }
 
     /**
-     * Converts Date object to string like "yyyy-MM-dd"
-     *
-     * @param date for converting
-     * @return String object
-     */
-    public static String convertToString(LocalDateTime date) {
-        return convertToString(date, "yyyy-MM-dd");
-    }
-
-    /**
      * Converts Date object to string according to pattern
      *
      * @param date for converting

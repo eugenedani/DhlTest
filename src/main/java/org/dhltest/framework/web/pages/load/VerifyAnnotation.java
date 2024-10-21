@@ -1,18 +1,19 @@
 package org.dhltest.framework.web.pages.load;
 
 import org.dhltest.framework.wait.PageWaitTime;
-import org.dhltest.framework.web.pages.WebPage;
+import org.dhltest.framework.web.pages.Page;
+import org.dhltest.framework.web.pages.PageLoadedCheck;
 import org.openqa.selenium.NotFoundException;
 
 /**
  * Handles Verify Annotation of class to get values for page loading settings
  */
 class VerifyAnnotation {
-    private final WebPage page;
+    private final Page page;
     private final PageWaitTime pageWaitTime;
 
-    VerifyAnnotation(WebPage page, PageWaitTime pageWaitTime) {
-        this.page = page;
+    VerifyAnnotation(PageLoadedCheck page, PageWaitTime pageWaitTime) {
+        this.page = (Page) page;
         this.pageWaitTime = pageWaitTime;
     }
 
@@ -20,7 +21,7 @@ class VerifyAnnotation {
         assertValidAnnotation();
 
         Verify verify = page.getClass().getAnnotation(Verify.class);
-        PageIsLoadedController controller = new PageIsLoadedController(page, pageWaitTime == PageWaitTime.DEFAULT_VALUE ? verify.waitTime() : pageWaitTime);
+        PageIsLoadedController controller = new PageIsLoadedController(page.webBrowser(), pageWaitTime == PageWaitTime.DEFAULT_VALUE ? verify.waitTime() : pageWaitTime);
         controller.element(new FindByAnnotation(page.getClass()).buildBy());
 
         if (verify.status()) {

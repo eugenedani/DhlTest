@@ -43,4 +43,4 @@ bin/
 
 ### Test Results ###
 /test-results/
-/src/test/workdir/
+/src/test/workdir/ErrorsScreenshots

@@ -14,12 +14,10 @@ public class Textbox {
         return textbox.isEnabled() && (value == null || !value.trim().equalsIgnoreCase("true"));
     }
 
-    public Textbox fill(String value) {
+    public void fill(String value) {
         if (isReadyToFill(value)) {
             textbox.sendKeys(value);
         }
-
-        return this;
     }
 
     public String getValue() {

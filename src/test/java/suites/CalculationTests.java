@@ -3,6 +3,7 @@ package suites;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import cases.ChooseRouteCalculationTests;
 import cases.ChooseRouteSectionTests;
 
 /**
@@ -12,6 +13,7 @@ import cases.ChooseRouteSectionTests;
 //@formatter:off
     @Suite.SuiteClasses({
             ChooseRouteSectionTests.class,
+            ChooseRouteCalculationTests.class,
     })
 //@formatter:on
 public class CalculationTests {

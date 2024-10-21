@@ -44,6 +44,8 @@ public class ChooseRouteSectionTests extends ParallelizedTestCase {
         List<WebElement> destinations = section.destinationCountry().select().getOptions();
         assertThat("Destination country dropdown list should have 1 option", destinations.size(), equalTo(1));
         assertThat("Destination country dropdown list option value is wrong", destinations.get(0).getText(), is("Sweden"));
+        String selectedCountry = section.destinationCountry().select().getFirstSelectedOption().getText().trim();
+        assertThat("Destination country dropdown list selected option value is wrong", selectedCountry, is("Sweden"));
     }
 
     @Test
@@ -53,5 +55,17 @@ public class ChooseRouteSectionTests extends ParallelizedTestCase {
         int originSize = section.destinationCountry().select().getOptions().size();
         int destinationSize = section.destinationCountry().select().getOptions().size();
         assertThat("Country dropdown lists do not have the same amount of options", destinationSize, equalTo(originSize));
+    }
+
+    @Test
+    public void verifySelectedValuesTest() {
+        ChooseRouteSection section = TestedPage.load(webBrowser).chooseRouteSection().scrollIntoView();
+        section.originCountry().select().selectByValue("SE");
+        section.destinationCountry().select().selectByValue("CZ");
+
+        String selectedCountry = section.originCountry().select().getFirstSelectedOption().getText().trim();
+        assertThat("Origin country dropdown list selected option value is wrong", selectedCountry, is("Sweden"));
+        selectedCountry = section.destinationCountry().select().getFirstSelectedOption().getText().trim();
+        assertThat("Destination country dropdown list selected option value is wrong", selectedCountry, is("Czech Republic"));
     }
 }
